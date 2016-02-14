@@ -1,0 +1,2 @@
+/usr/bin/ar cq libglew32mxs.a  CMakeFiles/glew32mxs.dir/src/glew.c.o
+/usr/bin/ranlib libglew32mxs.a

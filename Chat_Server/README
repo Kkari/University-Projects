@@ -1,0 +1,3 @@
+I write this program as a java programming assignment, although it's considerably more complex as it is necessary,
+I'm really interested in networking, that's why I chose to program a chat server, it will be based on the reactor pattern,
+And it will mix threaded and selector networking.

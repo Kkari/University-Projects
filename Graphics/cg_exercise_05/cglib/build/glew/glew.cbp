@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="glew" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\cglib\;CMake Files\..\cglib\lib\;CMake Files\..\cglib\lib\glfw\;CMake Files\..\cglib\lib\glfw\src\;CMake Files\..\cglib\lib\glew\;CMake Files\..\cglib\ext\;CMake Files\..\cglib\ext\cmake_helpers\;CMake Files\src\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64/fast">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64mx">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64mx.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_MX" />
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64mx" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64mx/fast">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64mx.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_MX" />
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64mx/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64mxs">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64mxs.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64mxs" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64mxs/fast">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64mxs.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64mxs/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64s">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64s.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64s" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glew64s/fast">
+         <Option output="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/libglew64s.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-D_USE_MATH_DEFINES" />
+            <Add option="-DCGLIB_DIR=&quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib&quot;" />
+            <Add option="-DGLEW_BUILD" />
+            <Add option="-DGLEW_NO_GLU" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/include" />
+            <Add directory="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glfw/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 glew64s/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/build/glew/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/src/glew.c">
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/cglib/lib/glew/build/glew.rc">
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/CMakeListsExercises.txt">
+          <Option virtualFolder="CMake Files\..\cglib\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/CMakeExerciseConfig.txt">
+          <Option virtualFolder="CMake Files\..\cglib\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/CMakeExerciseConfig.txt">
+          <Option virtualFolder="CMake Files\..\cglib\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/CMakeCGLibSource.txt">
+          <Option virtualFolder="CMake Files\..\cglib\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw3Config.cmake.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw3Config.cmake.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glfw/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glfw\src\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glew/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glew\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/lib/glew/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\cglib\lib\glew\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/ext/cmake_helpers/ChangeWorkingDirectory.cmake">
+          <Option virtualFolder="CMake Files\..\cglib\ext\cmake_helpers\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/ext/cmake_helpers/FindGLFW.cmake">
+          <Option virtualFolder="CMake Files\..\cglib\ext\cmake_helpers\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/../cglib/ext/cmake_helpers/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\..\cglib\ext\cmake_helpers\" />
+      </Unit>
+      <Unit filename="/home/kkari/UniStuff/Graphics/cg_exercise_05/05_distributed/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,8 @@
+/home/kkari/UniStuff/Graphics/cg_exercise_03/03_textures/build/CMakeFiles/AntTweakBar_make.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/03_textures/build/src/CMakeFiles/cg.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/cglib/CMakeFiles/cglib_cg_3.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/glew/CMakeFiles/glew64.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/glew/CMakeFiles/glew64mx.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/glew/CMakeFiles/glew64mxs.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/glew/CMakeFiles/glew64s.dir
+/home/kkari/UniStuff/Graphics/cg_exercise_03/cglib/build/glfw/src/CMakeFiles/glfw.dir

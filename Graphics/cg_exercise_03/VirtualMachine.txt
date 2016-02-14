@@ -1,0 +1,58 @@
+Hinweise zur Virtual Machine
+============================
+
+Abgegebene Lösungen zu den Programmieraufgaben werden von uns in einer VirtualBox Virtual Machine (VM) 
+mit Archlinux ausgeführt und getestet und *müssen* dort kompilieren und lauffähig sein.  
+
+Sollten Sie noch nie unter Linux mit der Kommandozeile gearbeitet haben, empfehlen wir Ihnen einen kurzen 
+Blick auf Einführungen wie z.B. http://tldp.org/LDP/intro-linux/html/chap_02.html (Linux Quickstart), 
+aber auch in dieser Anleitung werden alle essentiellen Schritte erklärt.
+
+Installation
+------------
+
+* Installieren Sie VirtualBox (https://www.virtualbox.org/).
+
+* Erstellen Sie in VirtualBox eine neue VM und laden Sie dort die mitgelieferte virtuelle Festplatte. 
+  Klicken Sie dazu in VirtualBox auf 'Neu/New' und folgen sie der geführten 
+  Installation. Als 'Operating System' tragen Sie Linux, als 'Version' Arch Linux (nicht 64-bit) ein. 
+  256MB Hauptspeicher sollten ausreichend sein. Wählen Sie als 'vorhandene Festplatte/existing hard disk' 
+  die Datei CG Übungen.vdi.
+
+* Tragen Sie einen Ordner auf Ihrer Festplatte, in dem Sie die für die Computergrafik-Übungen benötigten 
+  Dateien speichern wollen, als 'Gemeinsamen Ordner' für diese VM ein. Diese Ordner sind aus der VM 
+  les- und schreibbar. Sie können z.B. Dateien in Ihrem Host-System herunterladen, in diesen Ordner 
+  speichern und später mit der VM darauf zugreifen.
+
+  Öffnen Sie dazu die VM-Settings (z.B. Rechts-Klick auf die VM -> Ändern/Settings). Dort finden Sie den 
+  Punkt 'Gemeinsame Ordner/Shared Folders'. Fügen Sie einen Ordner hinzu und nennen Sie ihn 'shared'. Sie 
+  können den Ordner nach dem Start der VM dann unter /home/cg/shared erreichen.
+
+* Unter dem Punkt 'System' können Sie der VM nach Bedarf mehr Hauptspeicher und weitere CPUs zuteilen.
+
+* Starten Sie nun die VM in VirtualBox (z.B. mit Doppel-Klick).
+
+* Melden Sie sich als Nutzer cg an. Das Passwort ist ebenfalls cg. 
+
+
+Tipps
+-----
+
+* Nach dem Anmelden wird eine einfache grafische Oberfläche gestartet. Ein Konsolenfenster öffnet sich. 
+  Per Rechtsklick auf den Desktop erhalten Sie ein Startmenu. 
+
+* ALT-F3 öffnet ein weiteres Konsolenfenster. 
+
+* Geben Sie das Kommando 'poweroff' in einer Konsole ein, so fährt die VM herunter.
+
+* Der Nutzer cg kann über 'sudo' Administratorrechte erlangen. Möchten Sie beispielsweise den Editor 
+  vim zur Verfügung haben, so können Sie ihn über 
+
+	$ sudo pacman -S vim 
+
+  installieren. Sie werden dann nach Ihrem Passwort gefragt. Geben sie hier 'cg' an. 
+
+* Sie können Ihre Lösungen in der VM entwickeln. Sollten Sie das nicht wollen, so prüfen Sie zumindest vor 
+  der Abgabe, ob Ihre Lösung in der VM kompiliert und ohne Absturz läuft. 
+
+  Achtung: Für Lösungen, die in der VM nicht kompilieren oder abstürzen, werden 0 Punkte vergeben.

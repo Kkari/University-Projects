@@ -1,0 +1,66 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+% Serifenfont für Überschriften
+\setkomafont{disposition}{\normalcolor\bfseries}
+% Seitengröße mit Geometry-Paket einstellen
+\geometry{left=2.75cm,right=2.75cm,top=23mm,bottom=25mm,head=14.5pt}
+
+\sethlcolor{lightgray}
+\newcommand{\inlinecode}[1]{\hl{\texttt{#1}}}
+\newcommand{\todo}[1]{\textbf{\color{red}{#1}}\normalcolor}
+
+\title{Datenbankpraktikum -- Gruppe 3\\ Übungsblatt 5 Aufgabe 1}
+\author{Janis Hamme, Karoly Kemeny, Thomas Neureuther,\\ Ming Niu, Alex Rubinshteyn,  Xinxin Yang}
+
+\lstset{
+    frame=top,frame=bottom,
+    breaklines=true,
+    captionpos=t,
+    inputencoding={utf8},
+    columns=fullflexible,
+    breaklines=true
+}
+
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+
+\titlelabel{\thetitle. }
+
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+
+\maketitle
+
+\input{teilaufgabe1.tex}
+\input{teilaufgabe2.tex}
+\input{teilaufgabe3.tex}
+\input{zeitplanung.tex}
+
+\end{document}

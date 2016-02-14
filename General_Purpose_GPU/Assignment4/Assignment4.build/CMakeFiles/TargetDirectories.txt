@@ -1,0 +1,7 @@
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/CMakeFiles/Assignment.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/Common/CMakeFiles/GPUCommon.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/glew/CMakeFiles/glew64.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/glew/CMakeFiles/glew64mx.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/glew/CMakeFiles/glew64mxs.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/glew/CMakeFiles/glew64s.dir
+/home/kkari/UniStuff/GPUC/Assignment4/Assignment4.build/glfw/src/CMakeFiles/glfw.dir

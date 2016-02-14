@@ -1,0 +1,2 @@
+/home/kkari/UniStuff/GPUC/Assignment1/Assignment1.build/CMakeFiles/Assignment.dir
+/home/kkari/UniStuff/GPUC/Assignment1/Assignment1.build/Common/CMakeFiles/GPUCommon.dir

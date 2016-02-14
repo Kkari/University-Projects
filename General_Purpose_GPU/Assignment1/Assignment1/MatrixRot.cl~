@@ -1,0 +1,101 @@
+
+// Rotate the matrix CLOCKWISE
+
+//naive implementation: move the elements of the matrix directly to their destinations
+//this will cause unaligned memory accessed which - as we will see - should be avoided on the GPU
+
+__kernel void MatrixRotNaive(__global const float* M, __global float* MR, uint SizeX, uint SizeY)
+{
+	int2 GID;
+	GID.x = get_global_id(0);
+	GID.y = get_global_id(1);
+	
+	if(GID.x < SizeX && GID.y < SizeY) {
+	  MR[GID.x * SizeY + (SizeY - GID.y - 1)] = M[GID.y * SizeX + GID.x];
+	}
+}
+/*
+//this kernel does the same thing, however, the local memory is used to
+//transform a small chunk of the matrix locally
+//then write it back after synchronization in a coalesced access pattern
+__kernel void MatrixRotOptimized(__global const float* M, __global float* MR, uint SizeX, uint SizeY,
+							__local float* block)
+{
+	//// TO DO: Add kernel code
+	int2 GID;
+	GID.x = get_global_id(0);
+	GID.y = get_global_id(1);
+
+	int2 LID;
+	LID.x = get_local_id(0);
+	LID.y = get_local_id(1);
+	
+	//reading into local memory
+	if (GID.x < SizeX && GID.y < SizeY)
+	{
+	    block[LID.y*get_local_size(0) + LID.x] = M[GID.y*SizeX + GID.x]; //coalesced pattern
+	}
+	
+	//new local ID
+	int2 NLID;
+	// Nth object is going to be counted from bottom left
+	NLID.x = (LID.y * get_local_size(0) + LID.x) / get_local_size(1);
+	//subtract
+	NLID.y = get_local_size(1) - 1 - ((LID.y * get_local_size(0) + LID.x) % get_local_size(1)); 
+	
+	//new global ID
+	int2 NGID;
+	NGID.x = GID.x - LID.x + NLID.x; //same block, but different place inside the block
+	NGID.y = GID.y - LID.y + NLID.y;
+	
+	barrier(CLK_LOCAL_MEM_FENCE);
+	
+	if (NGID.x < SizeX && NGID.y < SizeY) //over-indexing is checked on the new IDs
+	{
+	    //same rotation algorithm as before, but using the new IDs
+	    MR[NGID.x * SizeY + (SizeY - NGID.y - 1)] = block[NLID.y*get_local_size(0) + NLID.x];
+	}
+}*/
+
+
+/* Author: Zoltan Bogaromi
+__kernel void MatrixRotOptimized(__global const float* M, __global float* MR, uint SizeX, uint SizeY, __local float* block)
+{
+        // TO DO: Add kernel code
+        uint2 GID;
+        GID.x = get_global_id(0);
+        GID.y = get_global_id(1);
+        uint2 LID;
+        LID.x = get_local_id(0);
+        LID.y = get_local_id(1);
+       
+        if (GID.x < SizeX && GID.y < SizeY)
+        {
+               
+                uint effectiveLocalSizeY = get_local_size(1); //this variable stores the real Y dimension of the tile (important, if work item IDs "point out")
+                int2 O; //stores the global (x,y) indices of the tile element (index applies to rotated matrix), which has local indices (0,0)
+                        //this determines the position of the tile in the rotated matrix
+                O.y = GID.x - LID.x;
+                O.x = SizeY - GID.y - effectiveLocalSizeY + LID.y; //O.x = (SizeY - 1 - GID.y) - (effectiveLocalSizeY - 1 - LID.y);
+                if (O.x < 0) //2DRange is bigger than matrix
+                {
+                        effectiveLocalSizeY += O.x;
+                        O.x = 0;
+                }
+                uint serial = LID.y * get_local_size(0) + LID.x; //ID of the work item, horizontally neighbouring work items have adjacent serial numbers
+                uint2 newLocalPos; //stores the relative position of tile element, which the actual work item has to write, to O
+                                   //this determines the place of element in the rotated tile
+                newLocalPos.y = serial / effectiveLocalSizeY;
+                newLocalPos.x = serial % effectiveLocalSizeY;
+ 
+                block[serial] = M[GID.y * SizeX + GID.x];
+ 
+                //we need to wait for other local threads to finish writing this shared array
+                barrier(CLK_LOCAL_MEM_FENCE);
+ 
+                //global position of tile (O) + local position of tile element (newLocalSize) = global position of tile element
+                //as newLocalPos is applied to rotated matrix, it can not be applied directly to "block", it has to be rotated back (counter clockwise)
+                MR[(O.y + newLocalPos.y) * SizeY + (O.x + newLocalPos.x)] = block[(effectiveLocalSizeY - 1 - newLocalPos.x) * get_local_size(0) + newLocalPos.y];
+        }
+}
+*/

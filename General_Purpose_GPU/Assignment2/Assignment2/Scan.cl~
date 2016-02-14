@@ -1,0 +1,122 @@
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+__kernel void Scan_Naive(const __global uint* inArray, __global uint* outArray, uint N, uint offset) 
+{
+	// TO DO: Kernel implementation
+    
+    if (get_global_id(0) < N) {
+        uint index = get_global_id(0);
+        //printf("\n el1: %d, el2: %d", index, index + offset);
+
+        outArray[get_global_id(0) + offset] = inArray[get_global_id(0) + offset] + inArray[get_global_id(0)];
+
+   /*     printf("\nAdding: %d and %d to position %d, result: %d", 
+                inArray[get_global_id(0) + offset],
+                inArray[index],
+                index + offset,
+                outArray[get_global_id(0) + offset]);
+                */
+
+        // copy the elements that hasn't been copied yet, but considered
+        // done. Like the 0. element in the first round, 1 in second etc.
+        // it could be optimized with coalescing
+        if (get_global_id(0) < offset && get_global_id(0) >= (offset >> 1)) 
+        {
+            outArray[get_global_id(0)] = inArray[get_global_id(0)];
+        }
+    }
+ //   if(get_global_id(0) == 0) printf("\n\n"); 
+}
+
+
+
+// Why did we not have conflicts in the Reduction? Because of the sequential addressing (here we use interleaved => we have conflicts).
+
+#define UNROLL
+#define NUM_BANKS			32
+#define NUM_BANKS_LOG		5
+#define SIMD_GROUP_SIZE		32
+
+// Bank conflicts
+#define AVOID_BANK_CONFLICTS
+#ifdef AVOID_BANK_CONFLICTS
+	// TO DO: define your conflict-free macro here
+#else
+	#define OFFSET(A) (A)
+#endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+__kernel void Scan_WorkEfficient(__global uint* array, __global uint* higherLevelArray, __local uint* localBlock)
+{
+	// TO DO: Kernel implementation
+
+	//uint GID = get_global_id(0);
+	//uint LID = get_local_id(0);
+	uint GID_data = GID << 1;
+	uint LID_data = LID << 1;
+	//uint LSize = get_local_size(0);
+	uint LSize_data = LSize << 1;
+
+	localBlock[LID_data] = array[GID_data];
+	localBlock[LID_data + 1] = array[GID_data] + array[GID_data + 1];
+	barrier(CLK_LOCAL_MEM_FENCE);
+
+	//maxLID: above were all active, now, only half of them
+	for (uint stride = 4, maxLID = LSize >> 1; stride <= LSize_data; stride <<= 1, maxLID >>= 1)
+	{
+		if (LID < maxLID)
+			localBlock[LID * stride + (stride - 1)] += localBlock[LID * stride + ((stride >> 1) - 1)];
+		barrier(CLK_LOCAL_MEM_FENCE);
+	}
+
+	if (LID == 0)
+		localBlock[LSize_data - 1] = 0;
+	
+	barrier(CLK_LOCAL_MEM_FENCE);
+
+	//stride = LSize_data >> 1 = (LSize << 1) >> 1 = LSize
+	for (uint stride = LSize, maxLID = 1; stride > 1; stride >>= 1, maxLID <<= 1)
+	{
+		if (LID < maxLID)
+		{
+			uint left_index = (LID_data + 1) * stride - 1; //LID_data * stride + (stride - 1) = (LID_data + 1) * stride - 1
+			uint right_index = (LID_data + 2) * stride - 1; //(LID_data + 1) * stride + (stride - 1) = (LID_data + 2) * stride - 1
+			uint left_temp = localBlock[left_index]; //left store!!
+			localBlock[left_index] = localBlock[right_index]; //left = right, then (!!!)
+			localBlock[right_index] += left_temp;//right += left stored (!!!)
+		}
+		barrier(CLK_LOCAL_MEM_FENCE);
+	}
+
+	//higherLevelArray[GID_data] = localBlock[LID_data + 1] + array[GID_data];
+	//higherLevelArray[GID_data + 1] = localBlock[LID_data] + localBlock[LID_data + 1] + array[GID_data + 1];
+	array[GID_data] += localBlock[LID_data + 1];
+	array[GID_data + 1] += localBlock[LID_data] + localBlock[LID_data + 1];
+	/*if (group == 0)
+		printf ("*(%u)* %u %u", GID, array[GID_data], array[GID_])*/
+
+	if (LID == LSize - 1)
+	{
+		higherLevelArray[group] = array[GID_data + 1];
+		//printf("*()* %u %u ----", group, localBlock[LSize_data - 1]);
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+__kernel void Scan_WorkEfficientAdd(__global uint* higherLevelArray, __global uint* array, __local uint* localBlock)
+{
+	// TO DO: Kernel implementation (large arrays)
+	// Kernel that should add the group PPS to the local PPS (Figure 14)
+	
+	if (group > 0)
+	{
+		uint index = ((GID - LID) << 1) + LID;
+		uint term = higherLevelArray[group - 1];
+		array[index] += term;
+		array[index + LSize] += term;
+	}
+}
+

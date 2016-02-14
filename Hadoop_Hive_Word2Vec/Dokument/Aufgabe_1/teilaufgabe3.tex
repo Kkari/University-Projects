@@ -1,0 +1,59 @@
+\section{Teilaufgabe}
+
+\subsection{Generelles}
+
+% Wegen Ressourcenbeschränkungen können wir für jeder Anfrage nicht Alle Worte in unserem Wortsatz untersuchen ob sie geeignet für Vorschlag sind. Deshalb möchten wir Clustering einsetzen, um die Suchraum zu beschränken. Am Ende kann man das Ergebnisse als True Positive wahrnehmen, wenn es eine Synonyme, Hyponyme oder Hyperonyme ist, mit diesem ansatz können wir die Genauigkeit von dem Clustering mit einem ROC Kurve aufzeigen.
+%
+%Für diese Projekt benutzen wir Word2Vec als ausgangspunkt für Clustering, weil wir gehört haben, dass es auch Semantische relationen zwischen Worte erkennen kann. Um den Clustering auszuwerten werden wir Wordnet benutzen (siehe nächste Paragraph).
+
+Die lexikalische Datenbank Wordnet gruppiert die enthaltenen Wörter in Synonymgruppen (\emph{Synsets})  verschiedener Sprachbereiche (Nomen, Adjektiven, Verben und Adverben). Diese werden auf verschiedene Art und Weise in Relation gesetzt. Mit Hilfe von Wordnet soll untersucht werden ob die durch Word2Vec gebildeten semantischen Beziehungen für einen Recommender geeignet sind.
+
+Für die Resultate eines Recommenders sind hauptsächlich Synonyme, Hyponyme und Hyperonyme nützlich, da den Kunden so ähnliche Produkte vorschlagen werden sollen. Da aufgrund beschränkter Ressourcen, Anfragen auf einen Cluster beschränkt werden sollen, muss untersucht werden wie stark die Ergebnisqualität dadurch beeinflusst wird.
+
+\subsection{Zu untersuchende Zusammenhänge}
+
+%\todo{Notizen von hier und von Karoly fertig ausformulieren}
+
+\subsubsection{Enthaltene Relationen sind (je nach Wortart)}
+
+\begin{itemize}
+\item{Hierarchische Anordnung von Synsets in Mengen von Überbegriffen (Hyperonyme) und Unterbegriffen (Hyponyme)}
+\item{Teil-Ganzes Beziehungen zwischen Synsets}
+\item{Spezialisierungen von Verben}
+\item{Gegenteile für Adjektive}
+\end{itemize}
+
+\subsubsection{Beispiele zur Motivation}
+
+\begin{itemize}
+\item{Gesucht: soft sweater}
+\item{Gute Vorschläge: comfortable sweater, soft pullover, fleecy hoodie}
+\item{Schlechte Vorschläge: scratchy sweater}
+\end{itemize}
+
+\subsubsection{Dabei zu berücksichtigen}
+
+\begin{itemize}
+\item{Welche Suchbegriffe eignen sich für die Untersuchung? $\rightarrow$ Testbegriffe festlegen}
+\item{Wie viele ähnliche Begriffe finden sich überhaupt in der Wordnet Datenbank (Überdeckung) $\rightarrow$ (Begriffe filtern?)}
+\item{Semantische Zusammenhänge: Synonyme, Hyponyme und Hyperonyme allgemein als erwünschter Bestandteil (bei jeder Wortart), bei Adjektiven aber keine Antonyme $\rightarrow$ Statistiken erstellen um Qualität der Ergebnisse zu prüfen}
+\item{Auswirkungen des Clusterings auf die Ergebnisqualität evaluieren und optimale Clustergröße ermitteln (Qualität/Performance Trade-off)}
+\end{itemize}
+
+\subsection{Umsetzung in Java}
+
+%\todo{Notizen von hier und von Karoly fertig ausformulieren}
+
+%\begin{itemize}
+%\item{nicht auf spezifische Wordnet Library festlegen, aber darauf hinweisen, dass verschiedene existieren}
+%\item{Verbindung zu Hive über JDBC}
+%\item{Nutzung eines vordefinierten Testsets an Wörtern}
+%\item{Ergebnisse in textueller Form}
+%\end{itemize}
+
+\begin{itemize}
+\item{Java Bibliotheken für Wordnet nutzen (z.B. JAWS $\rightarrow$ Java API for WordNet searching.)}
+\item{Testwörter aus Datei einlesen und Anfragen für jedes Wort mit und ohne Clustering ausführen}
+\item{Verbindung zu Hive aus Java über JDBC.}
+\item{Ausgabe des Ergebnises in Textform.}
+\end{itemize}

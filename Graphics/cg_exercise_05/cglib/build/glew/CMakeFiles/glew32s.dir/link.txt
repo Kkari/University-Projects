@@ -1,0 +1,2 @@
+/usr/bin/ar cq libglew32s.a  CMakeFiles/glew32s.dir/src/glew.c.o
+/usr/bin/ranlib libglew32s.a

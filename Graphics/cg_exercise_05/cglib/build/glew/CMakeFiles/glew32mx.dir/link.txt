@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -Wall -O0 -g  -shared -Wl,-soname,libglew32mx.so -o libglew32mx.so CMakeFiles/glew32mx.dir/src/glew.c.o 

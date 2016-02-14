@@ -1,0 +1,19 @@
+set(CGLIB_SOURCE_FILES
+	src/core/camera.cpp
+	src/core/gui.cpp
+	src/core/image.cpp
+	src/core/parameters.cpp
+	src/core/stb_image.cpp
+	src/core/thread_pool.cpp
+	src/core/timer.cpp
+	src/colors/cmf.cpp
+	src/colors/physics.cpp
+	src/gl/fbo.cpp
+	src/gl/device_render.cpp
+	src/gl/renderer.cpp
+	src/gl/device_rendering_context.cpp
+	src/gl/device_rendering_parameters.cpp
+	src/gl/shader.cpp
+	src/gl/program_definitions.cpp
+	src/core/file_util.cpp
+)

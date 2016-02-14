@@ -1,0 +1,15 @@
+\section{Teilaufgabe}
+
+Nachdem die Umgebungsvariablen für Hadoop und Hive eingerichtet wurden kann man mit dem Kommando \inlinecode{beeline -u jdbc:hive2://} auf eine Hive Shell zugreifen.
+
+Bei Hive wird zwischen \emph{managed} und \emph{external} Tabellen unterschieden. Bei managed Tabellen wird der Datenbestand von Hive selbst in einem Warehouse verwaltet während mit externen Tabellen bereits im HDFS existierende Daten eingebunden werden können. Da für das spätere Clustering direkt auf die Daten zugegriffen werden muss, sollte hier eine externe Tabelle verwendet werden.
+
+Das gegebene Text-Datenformat der \emph{Word2Vec}-Datenbestände kann direkt als Datenquelle für eine Hive Tabellen dienen: ein Datensatz belegt jeweils eine Zeile, wobei Wörter von ihrem zugehörigem Vektor durch einen Doppelpunkt, und einzelne Einträge des Vektors durch ein Komma, getrennt sind. \autoref{lst:schema} enthält SQL Code um eine entsprechende Tabelle anzulegen.
+
+\lstinputlisting[language=SQL,breaklines=true,caption=Schema,label=lst:schema]{../../Hive/SQL/schema.sql}
+
+Im Hinblick auf das Clustering wird ein spezielles Feld für Partitions-IDs benötigt welches über den Dateipfad abgebildet wird. Ein Datensatz lässt sich importieren indem er an den korrekten Pfad kopiert wird. Beispielsweise durch den Befehl \inlinecode{hdfs dfs -cp /usr/local/hadoop/dbprak/public/example.txt /usr/local/hadoop/dbprak/group3/words/id=0/example.txt}.
+
+\lstinputlisting[language=SQL,breaklines=true,caption=Query,label=lst:query]{../../Hive/SQL/queries.sql}
+
+\autoref{lst:query} zeigt wie eine typische Anfrage an die Tabelle aussehen könnte um die 50 ähnlichsten Wörter zu finden. Dazu muss allerdings zunächst eine Metrik, in diesem Falle \emph{cosineSimilarity}, als Userdefined Function implementiert werden. Da sowohl der Vektor des angefragten Wortes als auch des jeweils anderen Wortes als Parameter benötigt wird ist ein Cross Join notwendig.

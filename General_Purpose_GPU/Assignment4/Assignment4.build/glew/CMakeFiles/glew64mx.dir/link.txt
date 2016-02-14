@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC    -shared -Wl,-soname,libglew64mx.so -o libglew64mx.so CMakeFiles/glew64mx.dir/src/glew.c.o 

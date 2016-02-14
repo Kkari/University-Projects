@@ -1,0 +1,2 @@
+/usr/bin/ar cr libglew64mxs.a  CMakeFiles/glew64mxs.dir/src/glew.c.o
+/usr/bin/ranlib libglew64mxs.a

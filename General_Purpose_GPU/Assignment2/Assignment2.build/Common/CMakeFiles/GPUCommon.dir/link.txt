@@ -1,0 +1,2 @@
+/usr/bin/ar cr libGPUCommon.a  CMakeFiles/GPUCommon.dir/CLUtil.cpp.o CMakeFiles/GPUCommon.dir/CTimer.cpp.o CMakeFiles/GPUCommon.dir/CAssignmentBase.cpp.o
+/usr/bin/ranlib libGPUCommon.a

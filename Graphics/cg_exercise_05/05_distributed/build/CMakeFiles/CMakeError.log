@@ -1,0 +1,82 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_892ae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_892ae.dir/build.make CMakeFiles/cmTC_892ae.dir/build
+make: Warning: File 'Makefile' has modification time 0.63 s in the future
+make[1]: Entering directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_892ae.dir/flags.make' has modification time 0.61 s in the future
+Building C object CMakeFiles/cmTC_892ae.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_892ae.dir/CheckSymbolExists.c.o   -c /home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_892ae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_892ae.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_892ae.dir/CheckSymbolExists.c.o  -o cmTC_892ae -rdynamic 
+CMakeFiles/cmTC_892ae.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_892ae.dir/build.make:97: recipe for target 'cmTC_892ae' failed
+make[1]: Leaving directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTC_892ae] Error 1
+Makefile:126: recipe for target 'cmTC_892ae/fast' failed
+make: *** [cmTC_892ae/fast] Error 2
+
+File /home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e9cba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9cba.dir/build.make CMakeFiles/cmTC_e9cba.dir/build
+make: Warning: File 'Makefile' has modification time 0.64 s in the future
+make[1]: Entering directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_e9cba.dir/flags.make' has modification time 0.63 s in the future
+Building C object CMakeFiles/cmTC_e9cba.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e9cba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e9cba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9cba.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e9cba.dir/CheckFunctionExists.c.o  -o cmTC_e9cba -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e9cba.dir/build.make:97: recipe for target 'cmTC_e9cba' failed
+make[1]: Leaving directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTC_e9cba] Error 1
+Makefile:126: recipe for target 'cmTC_e9cba/fast' failed
+make: *** [cmTC_e9cba/fast] Error 2
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_99730/fast"
+make: Warning: File 'Makefile' has modification time 0.62 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_99730.dir/build.make CMakeFiles/cmTC_99730.dir/build
+make[1]: Entering directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_99730.dir/flags.make' has modification time 0.61 s in the future
+Building C object CMakeFiles/cmTC_99730.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_99730.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_99730
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99730.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTC_99730.dir/CheckFunctionExists.c.o  -o cmTC_99730 -rdynamic /usr/lib/libGL.so 
+CMakeFiles/cmTC_99730.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_99730.dir/build.make:98: recipe for target 'cmTC_99730' failed
+make[1]: Leaving directory '/home/cg/shared/cg_exercise_05/05_distributed/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTC_99730] Error 1
+Makefile:126: recipe for target 'cmTC_99730/fast' failed
+make: *** [cmTC_99730/fast] Error 2
+
+

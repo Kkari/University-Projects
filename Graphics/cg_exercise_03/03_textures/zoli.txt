@@ -1,0 +1,93 @@
+goboard_after_a_zero.tga: 
+  RMS error = 2.93329e-05
+  7 pixels (0.0107%) over 1e-06
+  7 pixels (0.0107%) over 1e-06
+goboard_after_c.tga: 
+  RMS error = 0.000100451
+  124 pixels (0.189%) over 1e-06
+  124 pixels (0.189%) over 1e-06
+goboard_after_d_debugmip.tga: 
+  RMS error = 0.000176663
+  391 pixels (0.597%) over 1e-06
+  391 pixels (0.597%) over 1e-06
+goboard_after_d_dudv.tga: 
+  RMS error = 3.95525e-05
+  20 pixels (0.0305%) over 1e-06
+  20 pixels (0.0305%) over 1e-06
+goboard_after_d.tga: 
+  RMS error = 5.59357e-05
+  35 pixels (0.0534%) over 1e-06
+  35 pixels (0.0534%) over 1e-06
+goboard_after_e.tga: 
+  RMS error = 0.00031244
+  62 pixels (0.0946%) over 1e-06
+  62 pixels (0.0946%) over 1e-06
+goboard_after_f.tga: 
+  RMS error = 0.000313065
+  63 pixels (0.0961%) over 1e-06
+  63 pixels (0.0961%) over 1e-06
+miplevel00.tga: 
+miplevel01.tga: 
+  RMS error = 0.000364227
+  106 pixels (2.59%) over 1e-06
+  106 pixels (2.59%) over 1e-06
+miplevel02.tga: 
+  RMS error = 0.000300183
+  18 pixels (1.76%) over 1e-06
+  18 pixels (1.76%) over 1e-06
+miplevel03.tga: 
+  RMS error = 0.000245098
+  3 pixels (1.17%) over 1e-06
+  3 pixels (1.17%) over 1e-06
+miplevel04.tga: 
+miplevel05.tga: 
+miplevel06.tga: 
+miplevel07.tga: 
+plane_after_a_zero.tga: 
+  RMS error = 0.0293973
+  251 pixels (0.383%) over 1e-06
+  251 pixels (0.383%) over 1e-06
+plane_after_b_clamp.tga: 
+  RMS error = 1.76884e-05
+  4 pixels (0.0061%) over 1e-06
+  4 pixels (0.0061%) over 1e-06
+plane_after_b_repeat.tga: 
+  RMS error = 0.0506143
+  33965 pixels (51.8%) over 1e-06
+  33965 pixels (51.8%) over 1e-06
+plane_after_c.tga: 
+  RMS error = 0.00144856
+  1140 pixels (1.74%) over 1e-06
+  1140 pixels (1.74%) over 1e-06
+plane_after_d_debugmip.tga: 
+  RMS error = 0.00011222
+  141 pixels (0.215%) over 1e-06
+  141 pixels (0.215%) over 1e-06
+plane_after_d_dudv.tga: 
+  RMS error = 4.05293e-05
+  21 pixels (0.032%) over 1e-06
+  21 pixels (0.032%) over 1e-06
+plane_after_d.tga: 
+  RMS error = 7.3996e-05
+  70 pixels (0.107%) over 1e-06
+  70 pixels (0.107%) over 1e-06
+pooltable_after_e.tga: 
+  RMS error = 0.00147309
+  2035 pixels (3.11%) over 1e-06
+  2035 pixels (3.11%) over 1e-06
+sphere_after_d_debugmip.tga: 
+  RMS error = 0.000130283
+  185 pixels (0.282%) over 1e-06
+  185 pixels (0.282%) over 1e-06
+sphere_after_d_dudv.tga: 
+  RMS error = 7.86091e-05
+  79 pixels (0.121%) over 1e-06
+  79 pixels (0.121%) over 1e-06
+sphere_after_d.tga: 
+  RMS error = 5.15702e-05
+  34 pixels (0.0519%) over 1e-06
+  34 pixels (0.0519%) over 1e-06
+sphere_after_f.tga: 
+  RMS error = 0.00935143
+  34752 pixels (53%) over 1e-06
+  34752 pixels (53%) over 1e-06

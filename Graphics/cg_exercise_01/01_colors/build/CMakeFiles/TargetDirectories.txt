@@ -1,0 +1,8 @@
+/home/cg/shared/cg_exercise_01/01_colors/build/src/CMakeFiles/cg.dir
+/home/cg/shared/cg_exercise_01/01_colors/build/CMakeFiles/AntTweakBar_make.dir
+/home/cg/shared/cg_exercise_01/cglib/build/cglib/CMakeFiles/cglib_cg_1.dir
+/home/cg/shared/cg_exercise_01/cglib/build/glew/CMakeFiles/glew32mxs.dir
+/home/cg/shared/cg_exercise_01/cglib/build/glew/CMakeFiles/glew32s.dir
+/home/cg/shared/cg_exercise_01/cglib/build/glew/CMakeFiles/glew32.dir
+/home/cg/shared/cg_exercise_01/cglib/build/glfw/src/CMakeFiles/glfw.dir
+/home/cg/shared/cg_exercise_01/cglib/build/glew/CMakeFiles/glew32mx.dir

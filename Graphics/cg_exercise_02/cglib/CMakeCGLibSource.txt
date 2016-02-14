@@ -1,0 +1,16 @@
+set(CGLIB_SOURCE_FILES
+	src/core/camera.cpp
+	src/core/gui.cpp
+	src/core/image.cpp
+	src/core/parameters.cpp
+	src/core/stb_image.cpp
+	src/core/thread_pool.cpp
+	src/core/timer.cpp
+	src/rt/host_render.cpp
+	src/rt/material.cpp
+	src/rt/object.cpp
+	src/rt/raytracing_context.cpp
+	src/rt/raytracing_parameters.cpp
+	src/rt/renderer.cpp
+	src/rt/scene.cpp
+)

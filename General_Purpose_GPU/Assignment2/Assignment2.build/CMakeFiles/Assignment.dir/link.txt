@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -std=c++11    CMakeFiles/Assignment.dir/CAssignment2.cpp.o CMakeFiles/Assignment.dir/CScanTask.cpp.o CMakeFiles/Assignment.dir/CReductionTask.cpp.o CMakeFiles/Assignment.dir/main.cpp.o  -o Assignment -rdynamic -lOpenCL Common/libGPUCommon.a 

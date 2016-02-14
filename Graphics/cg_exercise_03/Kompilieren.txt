@@ -1,0 +1,43 @@
+Kompilieren mit CMake und Make
+==============================
+
+* Öffnen Sie ein Terminal und wechseln Sie in das Verzeichnis der Aufgabe, z.b. 01_colors für das erste Übungsblatt:
+  $ cd 01_colors
+
+* Sie finden dort ein Unterverzeichnis build. Eine Liste der Dateien und Verzeichnisse erhalten Sie mit 'ls'
+  $ ls
+
+* Wechseln Sie ins Unterverzeichnis build und führen Sie cmake aus, um Makefiles zu erstellen. Dieser Schritt ist
+  nur einmal pro Aufgabe notwendig.
+  $ cd build
+  $ cmake ..
+  $ cd ..
+
+* Sie können CMake auch verwenden, um Projektdateien für Visual Studio zu erzeugen. Lesen Sie die Hilfe zu CMake,
+  um mehr Informationen zu erhalten.
+  $ cmake --help
+
+* Stellen Sie sicher, dass Sie im Verzeichnis der Aufgabe sind, also im Beispiel wieder in 01_colors. 
+  Führen Sie dann make aus, um das Programm zu erstellen.
+  $ make -C build
+
+* Sie finden nun eine ausführbare Datei mit dem Namen cg im Verzeichnis der Aufgabe. Führen Sie diese aus!
+  $ ./cg
+
+
+==============================
+Kompilieren mit Visual Studio
+==============================
+* Wenn Sie mit cmake eine Visual Studio (12, 2013) Solution gebaut haben, 
+  müssen Sie noch das Projekt "cg" als "standardmäßig ausführen" kennzeichnen. 
+  Dies geschieht durch Rechtsklick auf "cg" -> "Set As StartUp Project"
+
+==============================
+Kompilieren unter OSX
+==============================
+* Xcode Command Line Tools und CMake installieren
+* Anttweakbar installieren, z.B. mit homebrew (http://brew.sh/):
+  brew install anttweakbar
+* Eventuell muss glfw und glew ebenfalls mittels homebrew
+  installiert werden
+* Wie in der VM mit CMake und Make kompilieren
